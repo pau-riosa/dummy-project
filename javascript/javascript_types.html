@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // var a;
+        // console.log(`${a} typeof(a): ${typeof(a)}`);
+
+        // a = "hello world";
+        // console.log(`${a} typeof(a): ${typeof(a)}`);
+
+        // a = 42;
+        // console.log(`${a} typeof(a): ${typeof(a)}`);
+
+        // a = true;
+        // console.log(`${a} typeof(a): ${typeof(a)}`);
+        // console.log(`-----------------------------------------`);
+
+        // var a = null;
+
+        // (!a && typeof a === "object");
+
+
+        typeof function a(){} === "function";
+        function a(b,c) {
+
+        }
+
+       console.log(`a.length: ${a.length}`);
+
+       var a = 42;
+       console.log(`a = ${a} \ntypeof(a): ${typeof(a)}`);
+
+       a = true;
+       console.log(`a = ${a} \ntypeof(a): ${typeof(a)}`);
+
+       console.log(`typeof null === object: ${typeof null === "object"}`); //????
+
+
+
+
+       console.log("----------------------------------------------------");
+       var a;
+       typeof a;
+
+       var b = 42;
+       console.log(`b = ${b} \ntypeof(b): ${typeof(b)}`);
+       
+       var c ;
+       console.log(`c = ${c} \ntypeof(c): ${typeof(c)}`);
+       //later
+
+       b = c;
+       console.log("b = c;");
+       console.log(`b = ${b} \ntypeof(b): ${typeof(b)}`);
+       console.log(`c = ${c} \ntypeof(c): ${typeof(c)}`);
+
+       console.log("----------------------------------------------------");
+
+       console.log(`Here's a list of the most commonly used natives:`);
+       console.log(`String() Number() Boolean() Array() Object() Date() Error() Symbol()`);
+
+       var a = new String("abc");
+       console.log(`a = ${a} \ntypeof(a): ${typeof(a)}`);
+       console.log(`a = ${a} \na instanceof String: ${a instanceof String}`);
+       console.log(`a = ${a} \nObject.prototype.toString.call(a): ${Object.prototype.toString.call(a)}`);
+
+
+       console.log("-----------------------------COERCION--------------------------");
+       var a = 42;
+       var b = a + "";
+       var c = String(a);
+       console.log(`a = ${a} \ntypeof a: ${typeof(a)}`);
+       console.log(`b = ${b} \ntypeof b: ${typeof(b)}`);
+       console.log(`c = ${c} \ntypeof c: ${typeof(c)}`);
+
+       console.log("-----------------------------ABSTRACT VALUE OPERATIONS--------------------------");
+        var a = {
+            valueOf: function(){
+                return "42";
+            }
+        };
+
+        var b = {
+            toString: function(){
+                return "42";
+            }
+        };
+
+        var c = [4,2];
+        c.toString = function() {
+            return this.join("");
+        }
+
+        Number(a);
+        console.log(`Number(a): ${Number(a)}`);
+        Number(b);
+        console.log(`Number(b): ${Number(b)}`);
+        Number(c);
+        console.log(`Number(c): ${Number(c)}`);
+        Number("");
+        console.log(`Number(""): ${Number("")}`);
+        Number([]);
+        console.log(`Number([]): ${Number([])}`);
+        Number(["abc"]);
+        console.log(`Number(["abc"]): ${Number(["abc"])}`);
+
+        console.log("-----------------------------FALSY VALUES--------------------------");
+
+        console.log("-----------------------------TRUTHY VALUES--------------------------");
+        var a = "false";
+        console.log(a.length);
+        var b = "0";
+        console.log(b.length);
+        var c = "''";
+        console.log(c.length);
+        var d = Boolean(a && b && c);
+        console.log(d);
+
+        var a = [];
+        console.log(a.length);
+        var b = {};
+        console.log(b.length);
+        var c = function(){};
+        console.log(c.length);
+        var d = Boolean(a && b && c);
+        console.log(d);
+
+        console.log(Boolean(a));
+        console.log(Boolean(b));
+        console.log(Boolean(c));
+
+
+
+
+   </script>
+</body>
+</html>
